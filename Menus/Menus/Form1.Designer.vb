@@ -22,22 +22,29 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Field1 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Field2 = New System.Windows.Forms.TextBox()
+        Me.Field3 = New System.Windows.Forms.TextBox()
+        Me.Field4 = New System.Windows.Forms.TextBox()
+        Me.Field5 = New System.Windows.Forms.TextBox()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'Field1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(255, 112)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(125, 34)
-        Me.TextBox1.TabIndex = 0
+        Me.Field1.Location = New System.Drawing.Point(332, 142)
+        Me.Field1.Multiline = True
+        Me.Field1.Name = "Field1"
+        Me.Field1.Size = New System.Drawing.Size(125, 34)
+        Me.Field1.TabIndex = 0
         '
         'MenuStrip1
         '
@@ -66,7 +73,7 @@ Partial Class Form1
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
         Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.CloseToolStripMenuItem.Text = "Close"
+        Me.CloseToolStripMenuItem.Text = "Save"
         '
         'ExitToolStripMenuItem
         '
@@ -74,27 +81,81 @@ Partial Class Form1
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.Location = New System.Drawing.Point(601, 124)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(125, 62)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
+        'Field2
+        '
+        Me.Field2.Location = New System.Drawing.Point(332, 200)
+        Me.Field2.Name = "Field2"
+        Me.Field2.Size = New System.Drawing.Size(125, 27)
+        Me.Field2.TabIndex = 3
+        '
+        'Field3
+        '
+        Me.Field3.Location = New System.Drawing.Point(332, 253)
+        Me.Field3.Name = "Field3"
+        Me.Field3.Size = New System.Drawing.Size(125, 27)
+        Me.Field3.TabIndex = 4
+        '
+        'Field4
+        '
+        Me.Field4.Location = New System.Drawing.Point(332, 310)
+        Me.Field4.Name = "Field4"
+        Me.Field4.Size = New System.Drawing.Size(125, 27)
+        Me.Field4.TabIndex = 5
+        '
+        'Field5
+        '
+        Me.Field5.Location = New System.Drawing.Point(332, 364)
+        Me.Field5.Name = "Field5"
+        Me.Field5.Size = New System.Drawing.Size(125, 27)
+        Me.Field5.TabIndex = 6
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1082, 548)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Field5)
+        Me.Controls.Add(Me.Field4)
+        Me.Controls.Add(Me.Field3)
+        Me.Controls.Add(Me.Field2)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Field1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Field1 As TextBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CloseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Field2 As TextBox
+    Friend WithEvents Field3 As TextBox
+    Friend WithEvents Field4 As TextBox
+    Friend WithEvents Field5 As TextBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
