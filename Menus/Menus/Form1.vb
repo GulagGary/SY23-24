@@ -1,14 +1,11 @@
 ﻿Imports System.IO
-Imports System.Net.Http
 Imports System.Reflection
-Imports System.Runtime.InteropServices
 Imports System.Security.Cryptography.Pkcs
 
 Public Class Form1
     Dim records(50) As String
     Dim count As Integer
     Dim current As Integer
-
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         Field1.Text = ""
         Field2.Text = ""
@@ -27,6 +24,9 @@ Public Class Form1
     End Sub
 
     Private Sub FileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FileToolStripMenuItem.Click
+        savetofile()
+    End Sub
+    Sub savetofile()
         Dim r As String
         r += Field1.Text
         r += "|"
@@ -39,10 +39,8 @@ Public Class Form1
         r += Field5.Text
         r += "|"
         r += PictureBox1.ImageLocation
+        If count = 0 Then count = 1
         records(current) = r
-        savetofile()
-    End Sub
-    Sub savetofile()
         Dim outfile As New StreamWriter("data.txt")
         For index = 0 To count - 1
             outfile.WriteLine(records(index))
@@ -56,11 +54,13 @@ Public Class Form1
             While (Not inFile.EndOfStream)
                 records(count) = inFile.ReadLine
                 count = count + 1
-                showrecord(0)
             End While
+            inFile.Close()
+            showrecord(0)
         End If
     End Sub
     Public Sub showrecord(index As Integer)
+        PictureBox1.Image = Nothing
         If records(index) <> Nothing Then
             Dim fields() As String
             fields = records(index).Split("|")
@@ -75,13 +75,33 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub firstbutton_Click(sender As Object, e As EventArgs) Handles Firstbutton.Click
+    Private Sub firstbutton_Click(sender As Object, e As EventArgs) Handles firstbutton.Click
+        savetofile()
         current = 0
         showrecord(current)
     End Sub
 
-    Private Sub lastbutton_Click(sender As Object, e As EventArgs) Handles Lastbutton.Click
-        current = count - 1
+    Private Sub lastbutton_Click(sender As Object, e As EventArgs) Handles lastbutton.Click
+        savetofile()
+        If count > 0 Then
+            current = count - 1
+        End If
+        showrecord(current)
+    End Sub
+    Private Sub prevbutton_Click(sender As Object, e As EventArgs) Handles prevbutton.Click
+        savetofile()
+        If current > 0 Then
+            current = current - 1
+        End If
+        showrecord(current)
+    End Sub
+
+    Private Sub nextbutton_Click(sender As Object, e As EventArgs) Handles nextbutton.Click
+        savetofile()
+        If current < count - 1 Then
+            current = current + 1
+        End If
         showrecord(current)
     End Sub
 End Class
+

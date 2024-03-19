@@ -34,10 +34,10 @@ Partial Class Form1
         Me.Field4 = New System.Windows.Forms.TextBox()
         Me.Field5 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Firstbutton = New System.Windows.Forms.Button()
-        Me.Previousbutton = New System.Windows.Forms.Button()
+        Me.firstbutton = New System.Windows.Forms.Button()
+        Me.prevbutton = New System.Windows.Forms.Button()
         Me.nextbutton = New System.Windows.Forms.Button()
-        Me.Lastbutton = New System.Windows.Forms.Button()
+        Me.lastbutton = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -127,23 +127,23 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Firstbutton
+        'firstbutton
         '
-        Me.Firstbutton.Location = New System.Drawing.Point(27, 52)
-        Me.Firstbutton.Name = "Firstbutton"
-        Me.Firstbutton.Size = New System.Drawing.Size(94, 29)
-        Me.Firstbutton.TabIndex = 7
-        Me.Firstbutton.Text = "First"
-        Me.Firstbutton.UseVisualStyleBackColor = True
+        Me.firstbutton.Location = New System.Drawing.Point(27, 52)
+        Me.firstbutton.Name = "firstbutton"
+        Me.firstbutton.Size = New System.Drawing.Size(94, 29)
+        Me.firstbutton.TabIndex = 7
+        Me.firstbutton.Text = "First"
+        Me.firstbutton.UseVisualStyleBackColor = True
         '
-        'Previousbutton
+        'prevbutton
         '
-        Me.Previousbutton.Location = New System.Drawing.Point(27, 101)
-        Me.Previousbutton.Name = "Previousbutton"
-        Me.Previousbutton.Size = New System.Drawing.Size(94, 29)
-        Me.Previousbutton.TabIndex = 8
-        Me.Previousbutton.Text = "Previous"
-        Me.Previousbutton.UseVisualStyleBackColor = True
+        Me.prevbutton.Location = New System.Drawing.Point(27, 101)
+        Me.prevbutton.Name = "prevbutton"
+        Me.prevbutton.Size = New System.Drawing.Size(94, 29)
+        Me.prevbutton.TabIndex = 8
+        Me.prevbutton.Text = "Previous"
+        Me.prevbutton.UseVisualStyleBackColor = True
         '
         'nextbutton
         '
@@ -154,24 +154,24 @@ Partial Class Form1
         Me.nextbutton.Text = "Next"
         Me.nextbutton.UseVisualStyleBackColor = True
         '
-        'Lastbutton
+        'lastbutton
         '
-        Me.Lastbutton.Location = New System.Drawing.Point(27, 213)
-        Me.Lastbutton.Name = "Lastbutton"
-        Me.Lastbutton.Size = New System.Drawing.Size(94, 29)
-        Me.Lastbutton.TabIndex = 10
-        Me.Lastbutton.Text = "Last"
-        Me.Lastbutton.UseVisualStyleBackColor = True
+        Me.lastbutton.Location = New System.Drawing.Point(27, 213)
+        Me.lastbutton.Name = "lastbutton"
+        Me.lastbutton.Size = New System.Drawing.Size(94, 29)
+        Me.lastbutton.TabIndex = 10
+        Me.lastbutton.Text = "Last"
+        Me.lastbutton.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1082, 548)
-        Me.Controls.Add(Me.Lastbutton)
+        Me.Controls.Add(Me.lastbutton)
         Me.Controls.Add(Me.nextbutton)
-        Me.Controls.Add(Me.Previousbutton)
-        Me.Controls.Add(Me.Firstbutton)
+        Me.Controls.Add(Me.prevbutton)
+        Me.Controls.Add(Me.firstbutton)
         Me.Controls.Add(Me.Field5)
         Me.Controls.Add(Me.Field4)
         Me.Controls.Add(Me.Field3)
@@ -202,8 +202,8 @@ Partial Class Form1
     Friend WithEvents Field4 As TextBox
     Friend WithEvents Field5 As TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents Firstbutton As Button
-    Friend WithEvents Previousbutton As Button
+    Friend WithEvents firstbutton As Button
+    Friend WithEvents prevbutton As Button
     Friend WithEvents nextbutton As Button
-    Friend WithEvents Lastbutton As Button
+    Friend WithEvents lastbutton As Button
 End Class
